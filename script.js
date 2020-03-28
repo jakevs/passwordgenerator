@@ -17,16 +17,17 @@ Will need prompt and confirms when generate button is selected
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var lowerCh = "abcdefghijklmnopqrstuvwxyz";
-var upperCh = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var numCh = "0123456789";
-var specialCh = "!@#$%^&*()[]{}?";
-var intro = confirm("Do you want to create a random, secure password?");
-var num = confirm("Do you want use numbers?");
-var upper = confirm("Do you want to use upper case letters?");
-var lower = confirm("Do you want to use lower case letters?");
-var special = confirm("Do you want to use special characters?");
-var total = prompt("How many total characters do you want to use? Minimum number 6 Maximum 18");
+
+// var lowerCh = "abcdefghijklmnopqrstuvwxyz";
+// var upperCh = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+// var numCh = "0123456789";
+// var specialCh = "!@#$%^&*()[]{}?";
+// var intro = confirm("Do you want to create a random, secure password?");
+// var num = confirm("Do you want use numbers?");
+// var upper = confirm("Do you want to use upper case letters?");
+// var lower = confirm("Do you want to use lower case letters?");
+// var special = confirm("Do you want to use special characters?");
+// var total = prompt("How many total characters do you want to use? Minimum number 6 Maximum 18");
 
 
 // Write password to the #password input
@@ -36,11 +37,31 @@ function writePassword() {
 
   passwordText.value = password;
 
+
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword); {
-  var upper = confirm("Do you want to use upper case letters?")
+// generateBtn.addEventListener("click", writePassword); {
+// }
 
-}
+document.getElementById("generate").onclick = function() {
+  confirm("Do you want to create a random, secure password?");
+  confirm("Do you want to use numbers?");
+  confirm("Do you want to use upper case letters?");
+  confirm("Do you want to use lower case letters?");
+  confirm("Do you want to use special characters?");
+  prompt("How many total characters do you want to use? Minimum number 6 Maximum 18");
+
+};
+
+
+// document.querySelector('#generate').addEventListener('click', function() {
+//   var intro = confirm("Do you want to create a random, secure password?");
+// }
+
+// generate.addEventListener("click", functione(e)); {
+// }
+
+  // for (var = 0; i < 1; i++) {
+  // }
 
