@@ -13,6 +13,7 @@ Will need prompt and confirms when generate button is selected
   Create variable for prompts.
   If else statements?
   Loops?
+  Make something happen after confirm is answered - generate random letter, number or not
 */
 
 // Assignment Code
@@ -44,15 +45,24 @@ function writePassword() {
 // generateBtn.addEventListener("click", writePassword); {
 // }
 
-document.getElementById("generate").onclick = function() {
-  confirm("Do you want to create a random, secure password?");
+document.getElementById("generate").onclick = function(event) {
+  // confirm("Do you want to create a random, secure password?");
+
+  var response = confirm("Do you want to create a random, secure password?");
+  if ( response == true )
+  {
+     alert("A fine choice!")
+  }else{
+     alert("Catch you on the flip side!")
+     return;
+  }
   confirm("Do you want to use numbers?");
   confirm("Do you want to use upper case letters?");
   confirm("Do you want to use lower case letters?");
   confirm("Do you want to use special characters?");
   prompt("How many total characters do you want to use? Minimum number 6 Maximum 18");
-
 };
+
 
 
 // document.querySelector('#generate').addEventListener('click', function() {
