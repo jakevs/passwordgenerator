@@ -14,6 +14,7 @@ Will need prompt and confirms when generate button is selected
   If else statements?
   Loops?
   Make something happen after confirm is answered - generate random letter, number or not
+  Make value equal amount of characters selected by user
 */
 
 // Assignment Code
@@ -21,7 +22,7 @@ var generateBtn = document.querySelector("#generate");
 
 // var lowerCh = "abcdefghijklmnopqrstuvwxyz";
 // var upperCh = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-// var numCh = "0123456789";
+var numCh = "0123456789";
 // var specialCh = "!@#$%^&*()[]{}?";
 // var intro = confirm("Do you want to create a random, secure password?");
 // var num = confirm("Do you want use numbers?");
@@ -49,14 +50,22 @@ document.getElementById("generate").onclick = function(event) {
   // confirm("Do you want to create a random, secure password?");
 
   var response = confirm("Do you want to create a random, secure password?");
-  if ( response == true )
+    if (response == true)
   {
      alert("A fine choice!")
-  }else{
+  } else{
      alert("Catch you on the flip side!")
      return;
   }
-  confirm("Do you want to use numbers?");
+ var response = confirm("Do you want to use numbers?");
+    if (response == true) 
+  {
+    numCh = Math.floor((Math.random() * 10));
+    console.log(numCh);
+  } else {
+    console.log(false)
+  }
+  
   confirm("Do you want to use upper case letters?");
   confirm("Do you want to use lower case letters?");
   confirm("Do you want to use special characters?");
