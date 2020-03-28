@@ -21,7 +21,7 @@ Will need prompt and confirms when generate button is selected
 var generateBtn = document.querySelector("#generate");
 
 // var lowerCh = "abcdefghijklmnopqrstuvwxyz";
-// var upperCh = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var upperCh = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numCh = "0123456789";
 // var specialCh = "!@#$%^&*()[]{}?";
 // var intro = confirm("Do you want to create a random, secure password?");
@@ -50,26 +50,35 @@ document.getElementById("generate").onclick = function(event) {
   // confirm("Do you want to create a random, secure password?");
 
   var response = confirm("Do you want to create a random, secure password?");
-    if (response == true)
+    if (response === true)
   {
-     alert("A fine choice!")
+     alert("A fine choice!");
   } else{
-     alert("Catch you on the flip side!")
+     alert("Catch you on the flip side!");
      return;
   }
+
  var response = confirm("Do you want to use numbers?");
-    if (response == true) 
+    if (response === true) 
   {
     numCh = Math.floor((Math.random() * 10));
     console.log(numCh);
   } else {
-    console.log(false)
+    console.log(false);
   }
+
+  var response = confirm("Do you want to use upper case letters?");
+    if (response === true)
+    {
+    upperCh = Math.floor((Math.random() * upperCh));
+    console.log(upperCh)
+    }
+
   
-  confirm("Do you want to use upper case letters?");
-  confirm("Do you want to use lower case letters?");
-  confirm("Do you want to use special characters?");
-  prompt("How many total characters do you want to use? Minimum number 6 Maximum 18");
+  var response = confirm("Do you want to use upper case letters?");
+  var response = confirm("Do you want to use lower case letters?");
+  var response =confirm("Do you want to use special characters?");
+  var response =prompt("How many total characters do you want to use? Minimum number 6 Maximum 18");
 };
 
 
