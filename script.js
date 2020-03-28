@@ -19,11 +19,10 @@ Will need prompt and confirms when generate button is selected
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-
-// var lowerCh = "abcdefghijklmnopqrstuvwxyz";
+var lowerCh = "abcdefghijklmnopqrstuvwxyz";
 var upperCh = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numCh = "0123456789";
-// var specialCh = "!@#$%^&*()[]{}?";
+var specialCh = "!@#$%^&*()[]{}?";
 // var intro = confirm("Do you want to create a random, secure password?");
 // var num = confirm("Do you want use numbers?");
 // var upper = confirm("Do you want to use upper case letters?");
@@ -48,6 +47,8 @@ function writePassword() {
 
 document.getElementById("generate").onclick = function(event) {
   // confirm("Do you want to create a random, secure password?");
+//create variable
+var characterArray = "";
 
   var response = confirm("Do you want to create a random, secure password?");
     if (response === true)
@@ -60,26 +61,47 @@ document.getElementById("generate").onclick = function(event) {
 
  var response = confirm("Do you want to use numbers?");
     if (response === true) 
-  {
-    numCh = Math.floor((Math.random() * 10));
-    console.log(numCh);
-  } else {
-    console.log(false);
-  }
+    {
+      characterArray += numCh
+    };
+  //   numCh = Math.floor((Math.random() * 10));
+  //   console.log(numCh);
+  // } else {
+  //   console.log(false);
+  // }
 
   var response = confirm("Do you want to use upper case letters?");
-    if (response === true)
-    {
-    upperCh = Math.floor((Math.random() * upperCh));
-    console.log(upperCh)
-    }
+  if (response === true) 
+  {
+    characterArray += upperCh
+  };
 
   
-  var response = confirm("Do you want to use upper case letters?");
   var response = confirm("Do you want to use lower case letters?");
-  var response =confirm("Do you want to use special characters?");
-  var response =prompt("How many total characters do you want to use? Minimum number 6 Maximum 18");
+  if (response === true) 
+    {
+      characterArray += lowerCh
+    };
+
+  var response = confirm("Do you want to use special characters?");
+if (response === true) 
+    {
+      characterArray += specialCh
+    };
+  var response = prompt("How many total characters do you want to use?");
+  if (characterArray === "") {
+    alert("Must have valid characters.")
+    return;
+  }
+var generatedPwd = "";
+for (i = 0; i < response; i++) {
+    var number = Math.floor((Math.random() * characterArray.length));
+    generatedPwd += characterArray[number]
+
+}
+  console.log(generatedPwd);
 };
+
 
 
 
