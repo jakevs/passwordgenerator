@@ -17,7 +17,17 @@ Will need prompt and confirms when generate button is selected
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var lowerCh = "abcdefghijklmnopqrstuvwxyz";
+var upperCh = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var numCh = "0123456789";
+var specialCh = "!@#$%^&*()[]{}?";
 var intro = confirm("Do you want to create a random, secure password?");
+var num = confirm("Do you want use numbers?");
+var upper = confirm("Do you want to use upper case letters?");
+var lower = confirm("Do you want to use lower case letters?");
+var special = confirm("Do you want to use special characters?");
+var total = prompt("How many total characters do you want to use? Minimum number 6 Maximum 18");
+
 
 // Write password to the #password input
 function writePassword() {
@@ -30,5 +40,7 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword); {
+  var upper = confirm("Do you want to use upper case letters?")
+
 }
 
