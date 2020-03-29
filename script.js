@@ -15,6 +15,17 @@ Will need prompt and confirms when generate button is selected
   Loops?
   Make something happen after confirm is answered - generate random letter, number or not
   Make value equal amount of characters selected by user
+  // var intro = confirm("Do you want to create a random, secure password?");
+// var num = confirm("Do you want use numbers?");
+// var upper = confirm("Do you want to use upper case letters?");
+// var lower = confirm("Do you want to use lower case letters?");
+// var special = confirm("Do you want to use special characters?");
+// var total = prompt("How many total characters do you want to use? Minimum number 6 Maximum 18");
+  //   numCh = Math.floor((Math.random() * 10));
+  //   console.log(numCh);
+  // } else {
+  //   console.log(false);
+  // }
 */
 
 // Assignment Code
@@ -23,12 +34,6 @@ var lowerCh = "abcdefghijklmnopqrstuvwxyz";
 var upperCh = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numCh = "0123456789";
 var specialCh = "!@#$%^&*()[]{}?";
-// var intro = confirm("Do you want to create a random, secure password?");
-// var num = confirm("Do you want use numbers?");
-// var upper = confirm("Do you want to use upper case letters?");
-// var lower = confirm("Do you want to use lower case letters?");
-// var special = confirm("Do you want to use special characters?");
-// var total = prompt("How many total characters do you want to use? Minimum number 6 Maximum 18");
 
 
 // Write password to the #password input
@@ -42,11 +47,10 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword); {
-// }
+generateBtn.addEventListener("click", writePassword); {
+}
 
 document.getElementById("generate").onclick = function(event) {
-  // confirm("Do you want to create a random, secure password?");
 //create variable
 var characterArray = "";
 
@@ -64,18 +68,13 @@ var characterArray = "";
     {
       characterArray += numCh
     };
-  //   numCh = Math.floor((Math.random() * 10));
-  //   console.log(numCh);
-  // } else {
-  //   console.log(false);
-  // }
+
 
   var response = confirm("Do you want to use upper case letters?");
   if (response === true) 
   {
     characterArray += upperCh
   };
-
   
   var response = confirm("Do you want to use lower case letters?");
   if (response === true) 
@@ -84,7 +83,7 @@ var characterArray = "";
     };
 
   var response = confirm("Do you want to use special characters?");
-if (response === true) 
+  if (response === true) 
     {
       characterArray += specialCh
     };
@@ -94,12 +93,16 @@ if (response === true)
     return;
   }
 var generatedPwd = "";
-for (i = 0; i < response; i++) {
+  for (i = 0; i < response; i++) {
     var number = Math.floor((Math.random() * characterArray.length));
     generatedPwd += characterArray[number]
 
 }
   console.log(generatedPwd);
+  
+  document.getElementById("password").innerHTML = generatedPwd;
+
+
 };
 
 
@@ -115,3 +118,7 @@ for (i = 0; i < response; i++) {
   // for (var = 0; i < 1; i++) {
   // }
 
+//   while (targetDiv.firstChild) {
+//     targetDiv.removeChild(targetDiv.firstChild);
+// }
+// targetDiv.appendChild(document.createTextNode("Hello"));
