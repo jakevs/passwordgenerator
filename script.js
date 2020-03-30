@@ -1,4 +1,5 @@
 /*
+PseudoCode
 Will need prompt and confirms when generate button is selected
   - Would you like to create a secure password? confirm
   - How many total characters would you like in the password? (between 6-18) prompt
@@ -10,7 +11,7 @@ Will need prompt and confirms when generate button is selected
   - After all prompts are answered, should return an alert or on the blank in the content box. alert?
   ** Or could have a prompt that gives selections of characters to choose from. prompt
 
-  Create variable for prompts.
+  Create variables for prompts.
   If else statements?
   Loops?
   Make something happen after confirm is answered - generate random letter, number or not
