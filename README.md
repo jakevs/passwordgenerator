@@ -1,4 +1,3 @@
-# passwordgenerator
 <h1>Homework 3</h1>
 <p>Create a password generator</p>
 <h2>Project Details</h2>
