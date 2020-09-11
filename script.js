@@ -49,59 +49,59 @@ var upperCh = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numCh = "0123456789";
 var specialCh = "!@#$%^&*()[]{}?";
 
-
-document.getElementById("generate").onclick = function(event) {
-
-var characterArray = "";
+document.getElementById("generate").onclick = function (event) {
+  var characterArray = "";
+  var guaranteedCharacters = [];
 
   var response = confirm("Do you want to create a random, secure password?");
-    if (response === true)
-  {
-     alert("A fine choice!");
-  } else{
-     alert("Catch you on the flip side!");
-     return;
+  if (response === true) {
+    alert("A fine choice!");
+  } else {
+    alert("Catch you on the flip side!");
+    return;
   }
 
- var response = confirm("Do you want generator to select from random numbers?");
-    if (response === true) 
-  {
-      characterArray += numCh
-  };
+  var response = confirm(
+    "Do you want generator to select from random numbers?"
+  );
+  if (response === true) {
+    characterArray += numCh;
+  }
 
-  var response = confirm("Do you want generator to select from random upper case letters?");
-    if (response === true) 
-  {
-    characterArray += upperCh
-  };
-  
-  var response = confirm("Do you want generator to select from random lower case letters?");
-    if (response === true) 
-  {
-      characterArray += lowerCh
-  };
+  var response = confirm(
+    "Do you want generator to select from random upper case letters?"
+  );
+  if (response === true) {
+    characterArray += upperCh;
+  }
 
-  var response = confirm("Do you want generator to select from special characters?");
-    if (response === true) 
-  {
-      characterArray += specialCh
-  };
+  var response = confirm(
+    "Do you want generator to select from random lower case letters?"
+  );
+  if (response === true) {
+    characterArray += lowerCh;
+  }
+
+  var response = confirm(
+    "Do you want generator to select from special characters?"
+  );
+  if (response === true) {
+    characterArray += specialCh;
+  }
 
   var response = prompt("How many total characters do you want to use?");
-    if (characterArray === "") 
-  {
+  if (characterArray === "") {
     return;
   }
   var generatedPwd = "";
-    for (i = 0; i < response; i++) {
-    var number = Math.floor((Math.random() * characterArray.length));
-    generatedPwd += characterArray[number]
-
-}
+  for (i = 0; i < response; i++) {
+    var number = Math.floor(Math.random() * characterArray.length);
+    generatedPwd += characterArray[number];
+  }
+  for (var i = 0; i < guaranteedCharacters.length; i++) {
+    result[i] = guaranteedCharacters[i];
+  }
   console.log(generatedPwd);
-  
+
   document.getElementById("password").innerHTML = generatedPwd;
-
 };
-
-
